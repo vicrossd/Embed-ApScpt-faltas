@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Faltas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topo">
+      <h1>Controle de Faltas</h1>
+      <p class="sub">
+        Interface hospedada no GitHub Pages e conectada ao Google Sheets via Apps Script.
+      </p>
+    </header>
+
+    <section class="painel-config">
+      <label for="apiUrl">URL do Apps Script</label>
+      <div class="config-row">
+        <input
+          id="apiUrl"
+          type="text"
+          placeholder="Cole aqui a URL /exec do Apps Script"
+        />
+        <button id="salvarUrlBtn">Salvar URL</button>
+        <button id="carregarBtn">Carregar</button>
+      </div>
+      <p class="dica">
+        Cole a URL publicada do Apps Script terminando em <strong>/exec</strong>.
+      </p>
+      <p id="status" class="status"></p>
+    </section>
+
+    <section>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

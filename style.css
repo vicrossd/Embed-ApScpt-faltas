@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+}
+
+.app {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.topo h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+}
+
+.sub {
+  margin: 0 0 24px;
+  color: #4b5563;
+}
+
+.painel-config {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.painel-config label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.config-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.config-row input {
+  flex: 1 1 420px;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+#salvarUrlBtn,
+#carregarBtn {
+  background: #111827;
+  color: white;
+}
+
+.dica {
+  color: #6b7280;
+  margin: 10px 0 0;
+  font-size: 14px;
+}
+
+.status {
+  margin-top: 12px;
+  font-size: 14px;
+  min-height: 20px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 8px 0 16px;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-add {
+  background: #16a34a;
+  color: white;
+  flex: 1;
+}
+
+.btn-remove {
+  background: #dc2626;
+  color: white;
+  flex: 1;
+}
