@@ -10,31 +10,29 @@
   <main class="app">
     <header class="topo">
       <h1>Controle de Faltas</h1>
-      <p class="sub">
-        Interface hospedada no GitHub Pages e conectada ao Google Sheets via Apps Script.
-      </p>
+      <p class="sub">Painel de faltas com visual escuro para embed no Notion.</p>
     </header>
 
     <section class="painel-config">
-      <label for="apiUrl">URL do Apps Script</label>
+      <div class="campo">
+        <label for="supabaseUrl">Supabase URL</label>
+        <input id="supabaseUrl" type="text" placeholder="https://SEU-PROJETO.supabase.co" />
+      </div>
+
+      <div class="campo">
+        <label for="supabaseKey">Supabase anon key</label>
+        <input id="supabaseKey" type="text" placeholder="Cole sua anon public key" />
+      </div>
+
       <div class="config-row">
-        <input
-          id="apiUrl"
-          type="text"
-          placeholder="Cole aqui a URL /exec do Apps Script"
-        />
-        <button id="salvarUrlBtn">Salvar URL</button>
+        <button id="salvarBtn">Salvar configuração</button>
         <button id="carregarBtn">Carregar</button>
       </div>
-      <p class="dica">
-        Cole a URL publicada do Apps Script terminando em <strong>/exec</strong>.
-      </p>
+
       <p id="status" class="status"></p>
     </section>
 
-    <section>
-      <div id="cards" class="cards"></div>
-    </section>
+    <section id="cards" class="cards"></section>
   </main>
 
   <script src="script.js"></script>
