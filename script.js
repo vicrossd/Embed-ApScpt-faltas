@@ -147,7 +147,7 @@ async function registrar(acao, materia) {
 
 salvarUrlBtn.addEventListener('click', saveApiUrl);
 carregarBtn.addEventListener('click', async () => {
-  saveApiUrl();
+
   await carregarTudo();
 });
 
