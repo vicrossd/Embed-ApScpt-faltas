@@ -16,7 +16,8 @@ function getApiUrl() {
 }
 
 function saveApiUrl() {
-  let url = getApiUrl()?.trim();
+  return apiInput.value.trim() || localStorage.getItem(STORAGE_KEY)?.trim() || '';
+}
 
   if (!url) {
     url = 'https://script.google.com/macros/s/AKfycbzmV5z5qDr8fSdz0EkaSZjD9WbxbPecq7B3p0lwv-RLJWfVibMwIZ03DS_7d7p8sNiZVg/exec';
