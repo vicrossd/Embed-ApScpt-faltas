@@ -16,14 +16,16 @@ function getApiUrl() {
 }
 
 function saveApiUrl() {
-  const url = getApiUrl();
+  let url = getApiUrl()?.trim();
+
   if (!url) {
-    url = 'https://script.google.com/macros/s/AKfycbzmV5z5qDr8fSdzOEkaSZjD9wbxbPecq7B3p0lwv-RLJWfVibMwTZQ3DS_7d7p8sNiZVg/exec'
-    setStatus('Cole uma URL válida do Apps Script.', true);
-    return;
+    url = 'https://script.google.com/macros/s/AKfycbzmV5z5qDr8fSdz0EkaSZjD9WbxbPecq7B3p0lwv-RLJWfVibMwIZ03DS_7d7p8sNiZVg/exec';
+    setStatus('Campo vazio. URL padrão salva.');
+  } else {
+    setStatus('URL salva.');
   }
+
   localStorage.setItem(STORAGE_KEY, url);
-  setStatus('URL salva.');
 }
 
 function loadSavedApiUrl() {
