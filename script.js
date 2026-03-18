@@ -18,6 +18,7 @@ function getApiUrl() {
 function saveApiUrl() {
   const url = getApiUrl();
   if (!url) {
+    url = 'https://script.google.com/macros/s/AKfycbzmV5z5qDr8fSdzOEkaSZjD9wbxbPecq7B3p0lwv-RLJWfVibMwTZQ3DS_7d7p8sNiZVg/exec'
     setStatus('Cole uma URL válida do Apps Script.', true);
     return;
   }
